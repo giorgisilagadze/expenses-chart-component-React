@@ -71,9 +71,13 @@ export default function Spending() {
               bg={
                 index === days.indexOf(currentDay) - 1 ? "#76B5BC" : "#EC755D"
               }
+              bgDesk={
+                index === days.indexOf(currentDay) - 1 ? "#B4E0E5" : "#FF9B86"
+              }
               key={Math.random()}
               mTop={height[index].mar}
               pTop={height[index].pad}
+              cont={"$" + item.amount}
             />
           );
         })}

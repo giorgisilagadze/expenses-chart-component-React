@@ -9,6 +9,13 @@ export const MainDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media(min-width: 1440px) {
+        width: 540px;
+        margin: 182px auto 0px;
+        border-radius: 10px;
+        padding: 27px 38px 25px 32px;
+    }
 `
 
 export const BalText = styled.p`
@@ -16,6 +23,11 @@ export const BalText = styled.p`
     font-size: 15px;
     line-height: 19.53px;
     color: white;
+
+    @media(min-width: 1440px) {
+        font-size: 18px;
+        line-height: 23.44px;
+    }
 `
 
 export const Money = styled.p`
@@ -24,4 +36,9 @@ export const Money = styled.p`
     line-height: 31.25px;
     color: white;
     margin-top: 4px;
+
+    @media(min-width: 1440px) {
+        font-size: 32px;
+        line-height: 41.66px;
+    }
 `
