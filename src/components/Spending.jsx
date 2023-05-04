@@ -13,17 +13,18 @@ import {
   SpentMonth,
   Percent,
 } from "../styled-components/Spending.Styled";
+import data from "../../data.json";
 
 export default function Spending() {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("./data.json");
-      const weekdays = await response.json();
-      setData(weekdays);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await fetch("./data.json");
+  //     const weekdays = await response.json();
+  //     setData(weekdays);
+  //   })();
+  // }, []);
 
   const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
