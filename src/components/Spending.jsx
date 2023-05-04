@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
 import {
   SpenDiv,
   SpenTxt,
   DaysTable,
   Column,
-  Spent,
   DaysOfWeek,
   Days,
   Hr,
@@ -16,16 +14,6 @@ import {
 import data from "../../data.json";
 
 export default function Spending() {
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await fetch("./data.json");
-  //     const weekdays = await response.json();
-  //     setData(weekdays);
-  //   })();
-  // }, []);
-
   const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
   const date = new Date();

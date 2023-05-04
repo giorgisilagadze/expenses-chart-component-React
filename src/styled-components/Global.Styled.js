@@ -12,5 +12,8 @@ export const GlobalStyled = createGlobalStyle`
     body {
         height: 100vh;
         background-color: #f8e9dd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `

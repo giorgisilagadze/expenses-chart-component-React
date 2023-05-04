@@ -79,13 +79,6 @@ export const Column = styled.div`
     }
 `
 
-export const Spent = styled.div`
-    width: 30px;
-    height: 20px;
-    background-color: red;
-    margin-top: ${({mTop}) => mTop};
-`
-
 export const DaysOfWeek = styled.div`
     display: flex;
     margin-top: 8px;

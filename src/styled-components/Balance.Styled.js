@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainDiv = styled.div`
     width: 343px;
-    margin: 67px auto 0px;
+    margin: auto;
     background-color: #EC755D;
     border-radius: 10px;
     padding: 20px 24px 22px 20px;
@@ -12,7 +12,6 @@ export const MainDiv = styled.div`
 
     @media(min-width: 1440px) {
         width: 540px;
-        margin: 182px auto 0px;
         border-radius: 10px;
         padding: 27px 38px 25px 32px;
     }
