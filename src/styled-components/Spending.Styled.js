@@ -36,5 +36,53 @@ export const Spent = styled.div`
     width: 30px;
     height: 20px;
     background-color: red;
-    z-index: 3;
+    margin-top: ${({mTop}) => mTop};
+`
+
+export const DaysOfWeek = styled.div`
+    display: flex;
+    margin-top: 8px;
+    gap: 12px;
+`
+
+export const Days = styled.p`
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15.62px;
+    text-align: center;
+    color: #92857A;
+    width: 33px;
+`
+
+export const Hr = styled.hr`
+    width: 100%;
+    height: 2px;
+    border: none;
+    background-color: #F8E9DD;
+    margin-top: 24px;
+`
+
+export const Total = styled(DaysOfWeek)`
+    margin-top: 24px;
+    justify-content: space-between;
+`
+
+export const ThisMonth = styled.p`
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19.53px;
+    color: #92857A;
+`
+
+export const SpentMonth = styled(SpenTxt)`
+    font-size: 30px;
+    line-height: 39.06px;
+    margin-top: 4px;
+`
+
+export const Percent = styled(SpentMonth)`
+    font-size: 15px;
+    line-height: 19.53px;
+    margin-top: 23px;
+    text-align: right;
 `

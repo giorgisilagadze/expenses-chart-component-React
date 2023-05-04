@@ -5,6 +5,13 @@ import {
   DaysTable,
   Column,
   Spent,
+  DaysOfWeek,
+  Days,
+  Hr,
+  Total,
+  ThisMonth,
+  SpentMonth,
+  Percent,
 } from "../styled-components/Spending.Styled";
 
 export default function Spending() {
@@ -18,7 +25,7 @@ export default function Spending() {
     })();
   }, []);
 
-  const days = ["mon", "tue", "wed", "thur", "fri", "sat", "sun"];
+  const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
   const date = new Date();
   const currentDay = days[date.getDay()];
@@ -58,21 +65,35 @@ export default function Spending() {
     <SpenDiv>
       <SpenTxt>Spending - Last 7 days</SpenTxt>
       <DaysTable>
-        {data.map((item, index) => {
+        {data?.map((item, index) => {
           return (
-            <div>
-              <Column
-                bg={
-                  index === days.indexOf(currentDay) - 1 ? "#76B5BC" : "#EC755D"
-                }
-                key={Math.random()}
-                mTop={height[index].mar}
-                pTop={height[index].pad}
-              />
-            </div>
+            <Column
+              bg={
+                index === days.indexOf(currentDay) - 1 ? "#76B5BC" : "#EC755D"
+              }
+              key={Math.random()}
+              mTop={height[index].mar}
+              pTop={height[index].pad}
+            />
           );
         })}
       </DaysTable>
+      <DaysOfWeek>
+        {days.map((item) => {
+          return <Days key={Math.random()}>{item}</Days>;
+        })}
+      </DaysOfWeek>
+      <Hr />
+      <Total>
+        <div>
+          <ThisMonth>Total this month</ThisMonth>
+          <SpentMonth>$478.33</SpentMonth>
+        </div>
+        <div>
+          <Percent>+2.4% </Percent>
+          <ThisMonth>from last month</ThisMonth>
+        </div>
+      </Total>
     </SpenDiv>
   );
 }
